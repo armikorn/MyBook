@@ -2,6 +2,113 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "bootstrap";
+
+h1 {
+	font-size: 3em;
+letter-spacing: -2px;
+margin-bottom: 30px;
+text-align: center;
+color: #049CDB;
+}
+
 p{
+	color: #7A43B6;
+}
+
+body{
+	padding-left: 20px;
+	margin-left: 80px;
+	margin-right: 100px;
+	background-repeat: repeat-x;
+	background-image: url('pict/bg.gif');
+	border-left:5px dotted gray;
+	/*min-height: 750px;*/
+
+	background-color: #EBBF55;
+	padding:10px;
+	padding-top: -100px;
+}
+
+#info{
+	background-color: #DBFF4A;
+	padding:10px;
+	padding-top: -100px;
+}
+
+#status{
+	background-color: #C3325F;
+	padding:10px;
+	padding-top: -100px;
+}
+
+#st-h{
+	color: #F89406;
+}
+
+#in-h{
 	color: #00FF00;
 }
+
+
+/* universal */
+html {
+overflow-y: scroll;
+}
+body {
+padding-top: 60px;
+}
+section {
+overflow: auto;
+}
+textarea {
+resize: vertical;
+}
+.center {
+text-align: center;
+}
+.center h1 {
+margin-bottom: 10px;
+}
+
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+line-height: 1;
+}
+h1 {
+font-size: 3em;
+letter-spacing: -2px;
+margin-bottom: 30px;
+text-align: center;
+}
+h2 {
+font-size: 1.7em;
+letter-spacing: -1px;
+margin-bottom: 30px;
+text-align: center;
+font-weight: normal;
+color: #999;
+}
+p {
+font-size: 1.1em;
+line-height: 1.7em;
+}
+
+
+/* header */
+.logo {
+float: left;
+margin-right: 10px;
+font-size: 1.7em;
+color: #fff;
+
+letter-spacing: -1px;
+padding-top: 9px;
+font-weight: bold;
+line-height: 1;
+color: #fff;
+text-decoration: none;
+}
+
+
