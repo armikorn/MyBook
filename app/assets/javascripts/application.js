@@ -18,6 +18,7 @@
 //= require jquery.ui.all
 
 
+
 // Some general UI pack related JS
 // Extend JS String with repeat method
 String.prototype.repeat = function(num) {
