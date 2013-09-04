@@ -22,13 +22,19 @@
   </h3>
   <br>
 
-<p>Education : <%= @users.first.education %></p>
-<br>
-<p>Hobbies : <%= @users.first.hobbies %></p>
-<br>
-<p>Birthday : <%= @users.first.birthday %></p>
-<br>
-<p>Relationship : <%= @users.first.relationship %></p>
+<dl class="dl-horizontal">
+  <dt>Education :</dt>
+  <dd><%= @users.first.education %></dd>
+  <br>
+  <dt>Hobbies :</dt>
+  <dd><%= @users.first.hobbies %></dd>
+  <br>
+  <dt>Birthday :</dt>
+  <dd><%= @users.first.birthday %></dd>
+  <br>
+  <dt>Relationship :</dt>
+  <dd><%= @users.first.relationship %></dd>
+</dl>
 
 <br>
 <%= link_to 'Edit', edit_user_path(@users.first) %>
@@ -46,8 +52,13 @@
 
 <br>
 <% @status.each do |status_update| %>
-  <%= status_update.content %>
-  <%= link_to 'Destroy', status_update, method: :delete, data: { confirm: 'Are you sure?' } %>
+<blockquote>
+  <p><%= status_update.content %></p>
+  <small><%= @users.first.name %><cite title="Source Title"><p class="text-right"><%= link_to 'Destroy', status_update, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </cite></small>
+</blockquote>
+  
+  
   <hr>
 <% end %>
 <br>
@@ -57,3 +68,6 @@
     </div>
   </div>
 </div>
+
+
+
