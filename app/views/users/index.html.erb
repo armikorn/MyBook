@@ -1,16 +1,54 @@
-<div class="bottom-menu bottom-menu-inverse">
-  <div class="container">
-    <h2>MyBook</h2>
-  </div>
-</div>
+<div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+              <div class="container">
+                <div class="nav-collapse collapse" id="nav-collapse-01">
+                  <ul class="nav">
 
+
+
+                    <h2><%= @users.first.name %></h2>
+
+                    
+
+                    <li class="active"><a href="#fakelink">Home</a></li>
+                    <li><a href="#fakelink">Messages</a></li>
+                    <li><a href="#fakelink">Notifications</a></li>
+                    <li>
+                      <a href="#fakelink">Settings</a>
+                      <ul>
+                        <li><a href="#fakelink">Account Settings</a></li>
+                        <li><a href="#fakelink">Privacy Settings</a></li>
+                        <li><a href="#fakelink">Log Out</a></li>
+                      </ul> <!-- /Sub menu -->
+                    </li>
+                  </ul> <!-- /nav -->
+
+                  <p class="text-right"><input type="text" class="small" placeholder="Search" /></p>
+                  
+                </div><!--/.nav-collapse -->
+              </div>
+            </div>
+          </div> <!-- /navbar -->
 
 <br>
-  <h1 class="text-center">
-    <%= @users.first.name %>
-  </h1>
-<br><br>
 
+<p class="text-center">
+<ul class="nav nav-pills">
+  <li class="active">
+    <a href="#">Timeline</a>
+  </li>
+
+  <li>
+    <a href="#">Photos</a>
+  </li>
+
+  <li>
+    <a href="#">Friends</a>
+  </li>
+</ul>
+</p>
+
+<br>
 
 <div class="container-fluid">
   <div class="row-fluid">
@@ -18,13 +56,21 @@
       
 <br>
 <div class="text-center">
-<%= image_tag @users.first.avatar %>
+
+<button class="btn btn-danger"><%= image_tag @users.first.avatar %></button>
 </div>
 <br>
 
-  <h3 class="text-center">
-      <div>About</div>
+
+  <div class="well well-small">
+
+<button class="btn btn-info"><h3 class="text-left">
+    <div>
+      About
+    </div>
   </h3>
+</button>
+
   <br>
 
 <dl class="dl-horizontal">
@@ -42,18 +88,33 @@
 </dl>
 
 <br>
-<%= link_to 'Edit', edit_user_path(@users.first) %>
-<br><br>
+<p class="text-right">
+  <button class="btn btn-warning"><%= link_to 'Edit', edit_user_path(@users.first) %></button>
+</p>
+
+</div>
 
 
     </div>
     <div class="span7">
+   
       
-  <h3 class="text-center">
+  <div class="well well-small">
+
+  <button class="btn btn-info"><h3 class="text-left">
     <div>
       Status
     </div>
   </h3>
+</button>
+     
+     <p class="text-right">
+<button class="btn btn-default"><%= link_to 'New Status update', new_status_update_path %></button>
+</p>
+      
+  <br>
+
+
 
 <br>
 <% @status.each do |status_update| %>
@@ -66,9 +127,16 @@
   
   <hr>
 <% end %>
-<br>
-<%= link_to 'New Status update', new_status_update_path %>
-<br><br>
+
+
+</div>
+
+<textarea rows="3"></textarea>
+<p class="text-right">
+<button class="btn btn-success">Comment</button>
+</p>
+
+<br><br><br>
 
     </div>
   </div>
@@ -76,22 +144,4 @@
 
 
 
-<div class="navbar navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01"></button>
-      <a href="#" class="brand fui-flat"></a>
 
-      <div class="nav-collapse collapse" id="nav-collapse-01">
-        <ul class="nav">
-          <!-- Menu items go here -->
-          <li>
-            <ul>
-              <!-- Sub Menu items go here -->
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
