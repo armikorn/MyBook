@@ -4,26 +4,36 @@
             <div class="navbar-inner">
               <div class="container">
                 <div class="nav-collapse collapse" id="nav-collapse-01">
-                  <ul class="nav">
+                  
 
 
 
-                    <h2><%= @users.first.name %></h2>
+                    <h2>MyBook</h2>
 
                     
 
-                    <li class="active"><a href="#fakelink">Home</a></li>
-                    <li><a href="#fakelink">Messages</a></li>
-                    <li><a href="#fakelink">Notifications</a></li>
-                    <li>
-                      <a href="#fakelink">Settings</a>
-                      <ul>
-                        <li><a href="#fakelink">Account Settings</a></li>
-                        <li><a href="#fakelink">Privacy Settings</a></li>
-                        <li><a href="#fakelink">Log Out</a></li>
-                      </ul> <!-- /Sub menu -->
-                    </li>
-                  </ul> <!-- /nav -->
+                    <ul class="nav nav-pills">
+    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Notifications</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#">
+        Settings
+        <b class="caret"></b>
+      </a>
+    <ul class="dropdown-menu">
+      <!-- links -->
+      <li><a href="#">Account Settings</a></li>
+      <li><a href="#">Privacy Settings</a></li>
+      <li><a href="#">Log Out</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+                  
 
                   <p class="text-right"><input type="text" class="small" placeholder="Search" /></p>
                   
@@ -34,21 +44,19 @@
 
 <br>
 
-<p class="text-center">
-<ul class="nav nav-pills">
+<h1><%= @users.first.name %></h1>
+
+<br>
+
+<ul class="nav nav-tabs">
   <li class="active">
     <a href="#">Timeline</a>
   </li>
-
-  <li>
-    <a href="#">Photos</a>
-  </li>
-
-  <li>
-    <a href="#">Friends</a>
-  </li>
+  <li><a href="#">Photos</a></li>
+  <li><a href="#">Friends</a></li>
 </ul>
-</p>
+
+
 
 <br>
 
@@ -77,17 +85,17 @@
 
 <div id="front-info">
 <dl class="dl-horizontal">
-  <dt>Education :</dt>
-  <dd><%= @users.first.education %></dd>
+  <p class="text-error"><dt>Education :</dt></p>
+  <p class="text-warning"><dd><%= @users.first.education %></dd></p>
   <br>
-  <dt>Hobbies :</dt>
-  <dd><%= @users.first.hobbies %></dd>
+  <p class="text-error"><dt>Hobbies :</dt></p>
+  <p class="text-warning"><dd><%= @users.first.hobbies %></dd></p>
   <br>
-  <dt>Birthday :</dt>
-  <dd><%= @users.first.birthday %></dd>
+  <p class="text-error"><dt>Birthday :</dt></p>
+  <p class="text-warning"><dd><%= @users.first.birthday %></dd></p>
   <br>
-  <dt>Relationship :</dt>
-  <dd><%= @users.first.relationship %></dd>
+  <p class="text-error"><dt>Relationship :</dt></p>
+  <p class="text-warning"><dd><%= @users.first.relationship %></dd></p>
 </dl>
 </div>
 
