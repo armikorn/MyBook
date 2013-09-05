@@ -44,18 +44,23 @@
 
 <br>
 
+
 <h1><%= @users.first.name %></h1>
+
+<ul class="nav nav-tabs">
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+</ul>
 
 <br>
 
-<ul class="nav nav-tabs">
+<ul class="nav nav-pills">
   <li class="active">
     <a href="#">Timeline</a>
   </li>
   <li><a href="#">Photos</a></li>
   <li><a href="#">Friends</a></li>
 </ul>
-
 
 
 <br>
@@ -72,14 +77,24 @@
 <br>
 
 
-  <div class="well well-small">
-
-<button class="btn btn-info"><h3 class="text-left">
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#"><button class="btn btn-warning"><h4 class="text-left">
     <div>
       About
     </div>
   </h3>
-</button>
+</button></a>
+    <ul class="nav pull-right">
+      <li class="divider-vertical">
+      <li><a href="#"><%= link_to 'Edit', edit_user_path(@users.first) %></a></li></li>
+    </ul>
+  </div>
+</div>
+
+  <div class="well well-small">
+
+
 
   <br>
 
@@ -100,26 +115,39 @@
 </div>
 
 <br>
-<p class="text-right">
-  <button class="btn btn-warning"><%= link_to 'Edit', edit_user_path(@users.first) %></button>
-</p>
+
 
 </div>
 
 
     </div>
     <div class="span7">
-   
-      
-  <div class="well well-small">
 
-  <button class="btn btn-info"><h3 class="text-left">
+      <div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#"><button class="btn btn-success"><h3 class="text-left">
     <div>
       Status
     </div>
   </h3>
+</button></a>
+    <ul class="nav">
+    </ul>
+  </div>
+</div>
+   
+      
+  <div class="well well-small">
+
+
+    <br>
+
+
+     <p class="text-center">
+<button class="btn btn-huge btn-info">
+  <%= link_to 'New Status update', new_status_update_path %>
 </button>
-     
+</p>
      
       
   <br>
@@ -140,17 +168,13 @@
   <hr>
 <% end %>
 
-<p class="text-center">
-<button class="btn btn-huge btn-primary">
-  <%= link_to 'New Status update', new_status_update_path %>
-</button>
-</p>
+
 
 </div>
 
-<p class="text-center"><textarea rows="3"></textarea></p>
+<p class="text-right"><textarea rows="3"></textarea></p>
 <p class="text-right">
-<button class="btn btn-success">Comment</button>
+<button class="btn btn-primary">Comment</button>
 </p>
 
 <br><br><br>
