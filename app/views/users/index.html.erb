@@ -1,3 +1,5 @@
+<body class="body-background">
+
 <div class="navbar navbar-inverse">
             <div class="navbar-inner">
               <div class="container">
@@ -73,6 +75,7 @@
 
   <br>
 
+<div id="front-info">
 <dl class="dl-horizontal">
   <dt>Education :</dt>
   <dd><%= @users.first.education %></dd>
@@ -86,6 +89,7 @@
   <dt>Relationship :</dt>
   <dd><%= @users.first.relationship %></dd>
 </dl>
+</div>
 
 <br>
 <p class="text-right">
@@ -108,9 +112,7 @@
   </h3>
 </button>
      
-     <p class="text-right">
-<button class="btn btn-default"><%= link_to 'New Status update', new_status_update_path %></button>
-</p>
+     
       
   <br>
 
@@ -119,7 +121,9 @@
 <br>
 <% @status.each do |status_update| %>
 <blockquote>
+  <div id="front-status">
   <p><%= status_update.content %></p>
+  </div>
   <small><%= @users.first.name %><cite title="Source Title"><p class="text-right"><%= link_to 'Destroy', status_update, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     </cite></small>
 </blockquote>
@@ -128,10 +132,15 @@
   <hr>
 <% end %>
 
+<p class="text-center">
+<button class="btn btn-huge btn-primary">
+  <%= link_to 'New Status update', new_status_update_path %>
+</button>
+</p>
 
 </div>
 
-<textarea rows="3"></textarea>
+<p class="text-center"><textarea rows="3"></textarea></p>
 <p class="text-right">
 <button class="btn btn-success">Comment</button>
 </p>
@@ -144,4 +153,4 @@
 
 
 
-
+</body>

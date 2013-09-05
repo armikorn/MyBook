@@ -6165,3 +6165,19 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+
+
+//----------------------------------------------------------------------------------
+
+#front-info{
+  color: #CC00FF;
+}
+
+#front-status{
+  color: #00FF99;
+}
+
+.body-background{
+  background-color: #b6def5;
+}
